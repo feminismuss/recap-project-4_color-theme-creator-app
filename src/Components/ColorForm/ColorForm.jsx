@@ -1,5 +1,5 @@
-import ColorInput from "../ColorInput/ColorInput";
-import "./ColorForm.css";
+import ColorInput from "../ColorInput/ColorInput.jsx";
+// import "./Components/Color.css";
 
 export default function ColorForm({
   onSubmitColor,
@@ -9,6 +9,7 @@ export default function ColorForm({
     event.preventDefault();
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
+    console.log(data);
     onSubmitColor(data);
   }
   return (
