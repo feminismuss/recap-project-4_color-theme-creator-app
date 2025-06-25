@@ -11,7 +11,6 @@ export default function ColorForm({
     const data = Object.fromEntries(formData);
     onSubmitColor(data);
   }
-
   return (
     <form className="color-form" onSubmit={handleSubmit}>
       <label htmlFor="role">
