@@ -1,6 +1,13 @@
 .color-card {
-  margin: 0px 10px;
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
+  margin: 10px 10px;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
 }
 
 .color-card-headline {
