@@ -17,7 +17,7 @@ function App() {
       prevColors.filter((color) => color.id !== idToDelete)
     );
   }
-
+ 
   return (
     <>
       <h1>Theme Creator</h1>
