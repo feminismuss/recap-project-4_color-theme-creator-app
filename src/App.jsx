@@ -12,6 +12,11 @@ function App() {
     console.log(newColorWithId);
     setColors((prevColors) => [newColorWithId, ...prevColors]);
   }
+  function handleDeleteColor(idToDelete) {
+    setColors((prevColors) =>
+      prevColors.filter((color) => color.id !== idToDelete)
+    );
+  }
 
   return (
     <>
@@ -19,7 +24,13 @@ function App() {
       <ColorForm onSubmitColor={handleAddColor} />
       <div className="card-container">
         {colors.map((color) => {
-          return <Color key={color.id} color={color} />;
+          return (
+            <Color
+              key={color.id}
+              color={color}
+              onDelete={() => handleDeleteColor(color.id)}
+            />
+          );
         })}
       </div>
     </>
